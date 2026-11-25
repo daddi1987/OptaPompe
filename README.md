@@ -231,7 +231,7 @@ Dopo l'azzeramento viene registrato l'evento *Storico azzerato*.
 - Ogni **attivazione** di un allarme incrementa il contatore del **giorno locale** (ora italiana, con ora legale).
 - I rientri **non** sono conteggiati.
 - Gli eventi senza ora valida vengono contati a parte come **“senza data”**.
-- Si conservano gli ultimi `STATS_DAYS` = 366 giorni *con anomalie*; i giorni senza anomalie non occupano memoria.
+- Si conservano gli ultimi `STATS_DAYS` = 90 giorni *con anomalie*; i giorni senza anomalie non occupano memoria.
 - Persistenza in flash (chiave `/kv/stats`), azzerate insieme allo storico.
 
 ---
@@ -503,7 +503,7 @@ All'accensione tutti i LED sono spenti. Pin e polarità sono modificabili in `co
 | `MAIL_TEST_AT_BOOT` | 0 | 1 = invia una mail di prova all'avvio |
 | `MAIL_TLS_INSECURE` | 1 | 0 = verifica certificato (richiede `certs.h`) |
 | `LOG_SIZE` | 128 | Eventi in storico |
-| `STATS_DAYS` | 366 | Giorni con anomalie conservati |
+| `STATS_DAYS` | 90 | Giorni con anomalie conservati |
 | `LOG_RESET_ID` | 1 | Cambiare il valore per azzerare storico e statistiche |
 | `DEBUG_HEARTBEAT`, `MAIL_DEBUG` | 0, 1 | Diagnostica sulla seriale |
 
