@@ -231,7 +231,7 @@ Dopo l'azzeramento viene registrato l'evento *Storico azzerato*.
 - Ogni **attivazione** di un allarme incrementa il contatore del **giorno locale** (ora italiana, con ora legale).
 - I rientri **non** sono conteggiati.
 - Gli eventi senza ora valida vengono contati a parte come **“senza data”**.
-- Si conservano gli ultimi `STATS_DAYS` = 180 giorni *con anomalie*; i giorni senza anomalie non occupano memoria.
+- Si conservano gli ultimi `STATS_DAYS` = 90 giorni *con anomalie*; i giorni senza anomalie non occupano memoria.
 - Persistenza in flash (chiave `/kv/stats`), azzerate insieme allo storico.
 
 ---
